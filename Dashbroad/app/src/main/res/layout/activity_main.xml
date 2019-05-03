@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:gauge="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgapps"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginRight="20dp">
+
+            <ImageView
+                android:id="@+id/actualizar"
+                android:layout_width="62dp"
+                android:layout_height="62dp"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/sunset" />
+
+            <TextView
+                android:id="@+id/textmain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Estación Meteorológica UBB"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textmain"
+                android:layout_marginTop="6dp"
+                android:text="Indicadores Meteorológicos"
+                android:textColor="@color/colorAccent"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <GridLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alignmentMode="alignMargins"
+            android:columnCount="1"
+            android:columnOrderPreserved="false"
+            android:rowCount="6">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="352dp"
+                android:layout_height="304dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp"
+
+                >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <de.nitri.gauge.Gauge
+
+                        android:id="@+id/gauge2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="0.75"
+                        gauge:initialValue="0"
+                        gauge:labelTextSize="42"
+                        gauge:maxValue="100"
+                        gauge:minValue="0"
+                        gauge:totalNicks="120"
+                        gauge:upperText=""
+                        gauge:valuePerNick="1" />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="0"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="12dp"
+
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:scaleType="centerInside"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:src="@drawable/humidity"
+
+                        />
+
+                    <TextView
+                        android:layout_gravity="center_horizontal"
+                        android:id="@+id/textHum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="La Humedad relativa es"
+                        android:textColor="#6f6f6f"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp"
+
+                >
+
+                <LinearLayout
+                    android:layout_width="352dp"
+                    android:layout_height="304dp"
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <de.nitri.gauge.Gauge
+
+                        android:id="@+id/gauge1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        gauge:initialValue="0"
+                        gauge:labelTextSize="42"
+                        gauge:maxValue="60"
+                        gauge:minValue="0"
+                        gauge:totalNicks="120"
+                        gauge:upperText=""
+                        gauge:valuePerNick="1" />
+
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp"
+
+                >
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:scaleType="centerInside"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:src="@drawable/thermometer" />
+
+                    <TextView
+                        android:id="@+id/texTem"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="La temperatura actual"
+                        android:textColor="#6f6f6f"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="352dp"
+                android:layout_height="304dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp"
+
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <de.nitri.gauge.Gauge
+                        android:id="@+id/gauge3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        gauge:initialValue="0"
+                        gauge:labelTextSize="32"
+                        gauge:maxValue="1600"
+                        gauge:minValue="0"
+                        gauge:totalNicks="120"
+                        gauge:upperText=""
+                        gauge:valuePerNick="16" />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp"
+
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:scaleType="centerInside"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:src="@drawable/uv" />
+
+                    <TextView
+                        android:layout_gravity="center_horizontal"
+                        android:id="@+id/textUv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="Indice de radiacion UV"
+                        android:textColor="#6f6f6f"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+        </GridLayout>
+    </LinearLayout>
+
+</ScrollView>
